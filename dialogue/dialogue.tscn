@@ -1,0 +1,86 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://dialogue/dialogue.gd" type="Script" id=1]
+[ext_resource path="res://dialogue/ninepatchtest2.png" type="Texture" id=2]
+[ext_resource path="res://dialogue/spacebar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://dialogue/choice_button.tscn" type="PackedScene" id=4]
+
+[node name="Dialogue" type="NinePatchRect"]
+margin_left = 71.0
+margin_top = 383.0
+margin_right = 521.0
+margin_bottom = 563.0
+texture = ExtResource( 2 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+ChoiceButton = ExtResource( 4 )
+
+[node name="Portrait" type="TextureRect" parent="."]
+margin_left = 1.68178
+margin_top = -219.269
+margin_right = 201.682
+margin_bottom = 30.7311
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name_NinePatchRect" type="NinePatchRect" parent="."]
+margin_left = 4.0
+margin_top = -56.0
+margin_right = 154.0
+margin_bottom = -6.0
+texture = ExtResource( 2 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="Name_NinePatchRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Gedric "
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="RichTextLabel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_top = 15.0
+margin_right = -15.0
+margin_bottom = -15.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "text go here"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChoicePos" type="Position2D" parent="."]
+position = Vector2( 428.484, 146.832 )
+
+[node name="Space_NinePatchRect" parent="." instance=ExtResource( 3 )]
+margin_left = 366.59
+margin_top = 153.763
+margin_right = 516.59
+margin_bottom = 203.763
+
+[node name="Buttons" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Select" type="AudioStreamPlayer" parent="."]
+
+[node name="PopUp" type="AudioStreamPlayer" parent="."]

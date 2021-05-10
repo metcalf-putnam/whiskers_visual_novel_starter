@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://dialogue/choice_button.gd" type="Script" id=1]
+
+[node name="ChoiceButton" type="Button"]
+margin_right = 306.0
+margin_bottom = 27.0
+text = "text go here"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MouseOver" type="AudioStreamPlayer" parent="."]
+
+[connection signal="mouse_entered" from="." to="." method="_on_ChoiceButton_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_ChoiceButton_mouse_exited"]

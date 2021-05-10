@@ -1,0 +1,43 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Reference",
+"class": "WhiskersParser",
+"language": "GDScript",
+"path": "res://dialogue/whiskers_parser.gd"
+} ]
+_global_script_class_icons={
+"WhiskersParser": ""
+}
+
+[application]
+
+config/name="Whiskers Visual Novel Template"
+run/main_scene="res://root.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://global.gd"
+EventHub="*res://event_hub.gd"
+
+[debug]
+
+gdscript/warnings/unused_signal=false
+gdscript/warnings/return_value_discarded=false
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
